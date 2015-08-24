@@ -2,6 +2,11 @@
 <!-- Start Date:    August 2015   -->
 <!-- Last Modified: August 2015   -->
 
+<!-- TODO List
+     - For Production
+        - in <head> change <base href> to = "/"
+        - in <body> in jQuery .load() remove the '/icllcrecycle' from the path -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,11 +15,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <base href="/icllcrecycle/">
         <title>icllcrecycle</title>
+
+        <!-- TODO favicon -->
         <!--<link rel="icon" href="website/content/images/favicon/favicon.png">-->
 
         <!-- Bootstrap CSS 3.3.2 -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
+        <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="website/css/index.css">
         <link rel="stylesheet" type="text/css" href="website/css/flexbox.css">
 
@@ -27,9 +35,7 @@
         <!-- Bootstrap JS 3.3.2 -->
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-
-
-        <!-- load external content -->
+        <!-- load desktop and mobile views -->
         <script>
             $(function() {
                 $("#desktop").load("/icllcrecycle/website/desktop.html");
@@ -37,10 +43,11 @@
             });
         </script>
 
-        <div class="fill-viewport flex-column">
+        <!-- Website Content -->
+        <div class="fill-viewport">
 
-            <div id="desktop" class="desktop"></div>
-            <div id="mobile" class="mobile"></div>
+            <div id="desktop" class="desktop flex-column"></div>
+            <div id="mobile" class="mobile flex-column"></div>
 
         </div>
 
@@ -57,5 +64,6 @@
         <noscript>
             <!-- TODO -->
         </noscript>
+
     </body>
 </html>
