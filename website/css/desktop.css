@@ -1,3 +1,8 @@
 .title-desktop {
     font-size: 1em;
 }
+
+.tab-content-area {
+    max-width: 1000px;
+    margin: 0 auto;
+}
